@@ -1,0 +1,53 @@
+{
+  "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true,
+
+    /* Absolute paths */
+    "baseUrl": ".",
+    "paths": {
+        // import index exported members
+        // should be at top for highest priority
+        "assets": ["./src/assets"],
+        "components": ["./src/components"],
+        "hooks": ["./src/hooks"],
+        "pages": ["./src/pages"],
+        "styles": ["./src/styles"],
+        "utils": ["src/utils"],
+        "types": ["./src/types"],
+
+        // import files inside the folders
+        "assets/*": ["./src/assets/*"],
+        "components/*": ["./src/components/*"],
+        "hooks/*": ["./src/hooks/*"],
+        "pages/*": ["./src/pages/*"],
+        "styles/*": ["./src/styles/*"],
+        "utils/*": ["src/utils/*"],
+        "types/*": ["./src/types/*"],
+
+        // import root files
+        // should always be at bottom for lowest priority
+        "src/*": ["./src/*"]
+    },
+  },
+  "include": ["src"]
+}

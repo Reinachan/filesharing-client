@@ -1,0 +1,13 @@
+@import url("./theme.css");
+
+body {
+  all: unset;
+
+  min-block-size: 100vh;
+  margin: 0;
+
+  background-color: var(--page-background);
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+      "dbaeumer.vscode-eslint",
+      "clinyong.vscode-css-modules",
+      "phoenisx.cssvar",
+      "mikestead.dotenv",
+      "bierner.markdown-preview-github-styles",
+      "esbenp.prettier-vscode",
+      "stylelint.vscode-stylelint",
+  ]
+}

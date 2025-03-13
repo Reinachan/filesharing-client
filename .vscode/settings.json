@@ -1,0 +1,18 @@
+{
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact",
+    ],
+    "editor.codeActionsOnSave": {
+        "source.fixAll": "explicit",
+        "source.fixAll.stylelint": "explicit"
+    },
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.indentSize": 2,
+    "editor.detectIndentation": false,
+    "cssvar.ignore": ["**/node_modules/**", "**/dist/**"]
+}

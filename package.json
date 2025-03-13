@@ -1,0 +1,46 @@
+{
+  "name": "filesharing-client",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "vite --host",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.21.0",
+    "@types/node": "^22.13.10",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@typescript-eslint/parser": "^8.26.1",
+    "@vitejs/plugin-react-swc": "^3.8.0",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^9.21.0",
+    "eslint-import-resolver-typescript": "https://pkg.csb.dev/import-js/eslint-import-resolver-typescript/commit/1a15b976/eslint-import-resolver-typescript",
+    "eslint-plugin-import-x": "^4.6.1",
+    "eslint-plugin-react-dom": "^1.33.0",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "eslint-plugin-react-x": "^1.33.0",
+    "globals": "^16.0.0",
+    "postcss": "^8.5.3",
+    "stylelint": "^16.15.0",
+    "stylelint-config-idiomatic-order": "^10.0.0",
+    "stylelint-config-standard": "^37.0.0",
+    "stylelint-declaration-strict-value": "^1.10.11",
+    "stylelint-high-performance-animation": "^1.11.0",
+    "stylelint-max-lines": "^0.1.0",
+    "stylelint-order": "^6.0.4",
+    "stylelint-use-logical-spec": "^5.0.1",
+    "stylelint-use-nesting": "^6.0.0",
+    "typescript": "~5.8.2",
+    "typescript-eslint": "^8.26.1",
+    "vite": "^6.2.0"
+  }
+}

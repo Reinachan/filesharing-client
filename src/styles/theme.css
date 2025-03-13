@@ -1,0 +1,7 @@
+:root {
+  --page-bkg: #080808;
+}
+
+body {
+  background-color: var(--page-bkg);
+}
