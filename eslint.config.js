@@ -1,3 +1,4 @@
+// *@ts-check*
 import js from "@eslint/js";
 import globals from "globals";
 import reactHooks from "eslint-plugin-react-hooks";
@@ -61,14 +62,22 @@ export default tseslint.config(
           "newlines-between": "always",
           pathGroups: [
             {
-              pattern:
-                "{assets,components,hooks,pages,styles,types,utils,src}/**",
-              group: "parent",
+              pattern: "{assets,components,hooks,pages,types,utils,src}/**",
+              group: "internal",
             },
             {
-              pattern: "{assets,components,hooks,pages,styles,types,utils,src}",
+              pattern: "{assets,components,hooks,pages,types,utils,src}",
+              group: "internal",
+              position: "before",
+            },
+            {
+              pattern: "./*.css",
               group: "parent",
               position: "before",
+            },
+            {
+              pattern: "styles/**",
+              group: "parent",
             },
           ],
           alphabetize: {
@@ -78,11 +87,17 @@ export default tseslint.config(
             "builtin",
             "external",
             "internal",
-            "parent",
             "sibling",
             "index",
             "object",
+            "unknown",
+            "type",
+            // The parent group cannot exist because parent imports
+            // are not allowed. So we treat it as a special group to
+            // put our css imports in
+            "parent",
           ],
+          warnOnUnassignedImports: true,
         },
       ],
       "import-x/no-useless-path-segments": ["error", { noUselessIndex: true }],
