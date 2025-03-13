@@ -42,5 +42,9 @@
     "typescript": "~5.8.2",
     "typescript-eslint": "^8.26.1",
     "vite": "^6.2.0"
+  },
+  "volta": {
+    "node": "22.14.0",
+    "npm": "11.2.0"
   }
 }
