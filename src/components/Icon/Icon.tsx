@@ -10,5 +10,5 @@ const iconName = {
 };
 
 export default function Icon({ icon, size }: { icon: IconName; size: number }) {
-  return <img src={iconName[icon]} width={size} />;
+  return <img src={iconName[icon]} width={size} alt={icon} />;
 }
