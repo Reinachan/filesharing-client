@@ -6,7 +6,7 @@ body {
   min-block-size: 100vh;
   margin: 0;
 
-  background-color: var(--page-background);
+  background-color: var(--page-bkg);
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

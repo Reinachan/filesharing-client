@@ -1,7 +1,28 @@
 :root {
+  /* Page */
   --page-bkg: #080808;
-}
 
-body {
-  background-color: var(--page-bkg);
+  /* Text */
+  --heading-text-clr: #fff;
+  --main-text-clr: #fff;
+  --tertiary-text-clr: #8a8a8a;
+  --link-text-clr: #92ccff;
+
+  /* Card */
+  --card-bkg: #141414;
+  --card-layer-bkg: #111;
+
+  /* Navbar */
+  --navbar-bkg: #333;
+
+  /* Input */
+  --input-bkg: #202020;
+  --input-text-clr: #ececec;
+  --input-placeholder-clr: #b6b6b6;
+
+  /* Button */
+  --button-text-clr: var(--main-text-clr);
+  --button-primary-bkg: #406280;
+  --button-secondary-bkg: #202020;
+  --button-warning-bkg: #a73434;
 }
