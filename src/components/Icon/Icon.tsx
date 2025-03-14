@@ -1,16 +1,14 @@
 import { folders, key, rubbish, unlocked } from "./assets";
 
-type IconName = "folders" | "unlocked" | "key" | "rubbish";
+type IconName = keyof typeof iconName;
+
+const iconName = {
+  folders,
+  key,
+  unlocked,
+  rubbish,
+};
 
 export default function Icon({ icon, size }: { icon: IconName; size: number }) {
-  const iconName =
-    icon === "folders"
-      ? folders
-      : icon === "unlocked"
-      ? unlocked
-      : icon === "key"
-      ? key
-      : rubbish;
-
-  return <img src={iconName} width={size} />;
+  return <img src={iconName[icon]} width={size} />;
 }
