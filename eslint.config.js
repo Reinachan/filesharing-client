@@ -9,6 +9,8 @@ import eslintPluginImportX from "eslint-plugin-import-x";
 import reactX from "eslint-plugin-react-x";
 import reactDom from "eslint-plugin-react-dom";
 
+const { createNodeResolver } = eslintPluginImportX;
+
 export default tseslint.config(
   { ignores: ["dist", "node_modules"] },
   {
@@ -26,7 +28,11 @@ export default tseslint.config(
       sourceType: "module",
       globals: globals.browser,
       parserOptions: {
-        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
+        project: [
+          "tsconfig.json",
+          "./tsconfig.node.json",
+          "./tsconfig.app.json",
+        ],
         tsconfigRootDir: import.meta.dirname,
       },
     },
@@ -36,6 +42,38 @@ export default tseslint.config(
       "react-x": reactX,
       "react-dom": reactDom,
       import: eslintPluginImportX,
+    },
+    settings: {
+      "import-x/resolver-next": [
+        createNodeResolver({
+          extensions: [".ts", ".tsx"],
+          conditionNames: ["import", "require", "default"],
+          mainFields: ["module", "main"],
+
+          tsconfig: {
+            configFile: "tsconfig.json",
+            references: ["tsconfig.app.json", "tsconfig.node.json"],
+          },
+          alias: {
+            assets: ["./src/assets"],
+            components: ["./src/components"],
+            hooks: ["./src/hooks"],
+            pages: ["./src/pages"],
+            styles: ["./src/styles"],
+            utils: ["src/utils"],
+            types: ["./src/types"],
+
+            // import files inside the folders
+            "assets/*": ["./src/assets/*"],
+            "components/*": ["./src/components/*"],
+            "hooks/*": ["./src/hooks/*"],
+            "pages/*": ["./src/pages/*"],
+            "styles/*": ["./src/styles/*"],
+            "utils/*": ["src/utils/*"],
+            "types/*": ["./src/types/*"],
+          },
+        }),
+      ],
     },
     rules: {
       ...reactHooks.configs.recommended.rules,
@@ -72,12 +110,12 @@ export default tseslint.config(
             },
             {
               pattern: "./*.css",
-              group: "parent",
+              group: "unknown",
               position: "before",
             },
             {
               pattern: "styles/**",
-              group: "parent",
+              group: "unknown",
             },
           ],
           alphabetize: {
@@ -87,15 +125,12 @@ export default tseslint.config(
             "builtin",
             "external",
             "internal",
+            "parent",
             "sibling",
             "index",
             "object",
             "unknown",
             "type",
-            // The parent group cannot exist because parent imports
-            // are not allowed. So we treat it as a special group to
-            // put our css imports in
-            "parent",
           ],
           warnOnUnassignedImports: true,
         },
@@ -103,7 +138,8 @@ export default tseslint.config(
       "import-x/no-useless-path-segments": ["error", { noUselessIndex: true }],
       "import-x/newline-after-import": "error",
       "import-x/first": "error",
-      "import-x/no-relative-parent-imports": "error",
+      // TODO: Re-enable whenever the bug that causes this to error on path aliases is fixed
+      // "import-x/no-relative-parent-imports": "error",
       "@typescript-eslint/consistent-type-imports": "error",
     },
   }
