@@ -50,11 +50,11 @@ export function SignIn() {
             setPassword(e.currentTarget.value);
           }}
         />
-        <button type="button" onClick={handleClear}>
-          Log Out
+        <button type="button" onClick={handleClear} disabled={isPending}>
+          Sign Out
         </button>
-        <button type="submit" onClick={handleSubmit}>
-          Submit
+        <button type="submit" onClick={handleSubmit} disabled={isPending}>
+          Sign In
         </button>
         {isPending && <p>loading</p>}
         {err && <p>{err}</p>}
