@@ -1,7 +1,7 @@
 import { use, useState, useTransition } from "react";
 
 import { getToken } from "api";
-import { AuthContext } from "contexts";
+import { SessionContext } from "contexts";
 
 const display = "block";
 
@@ -10,7 +10,7 @@ export function SignIn() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [err, setErr] = useState("");
-  const { user, setAuth, clearAuth } = use(AuthContext);
+  const { user, setAuth, clearAuth } = use(SessionContext);
   const [isPending, startTransition] = useTransition();
 
   const handleSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {

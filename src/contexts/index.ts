@@ -1,1 +1,1 @@
-export { AuthContext, AuthContextProvider } from "./AuthContext";
+export { SessionContext, SessionContextProvider } from "./SessionContext";

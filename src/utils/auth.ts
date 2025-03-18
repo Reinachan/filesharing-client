@@ -1,7 +1,7 @@
-import type { AuthSession } from "types";
+import type { Session } from "types";
 
 /** saves the user session to localstorage */
-export const saveAuth = (user: AuthSession) => {
+export const saveAuth = (user: Session) => {
   if (!user.token) return;
 
   localStorage.setItem("auth", JSON.stringify(user));
@@ -14,9 +14,9 @@ export const removeAuth = () => {
 
 /**
  * loads user session from localstorage
- * @returns {AuthSession} user session
+ * @returns {Session} user session
  */
 export const loadAuth = () => {
   const storage = localStorage.getItem("auth");
-  if (storage) return JSON.parse(storage) as AuthSession;
+  if (storage) return JSON.parse(storage) as Session;
 };

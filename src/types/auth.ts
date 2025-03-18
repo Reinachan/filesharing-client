@@ -4,12 +4,12 @@ export interface Token {
   token: string;
 }
 
-export interface AuthSession extends Token {
+export interface Session extends Token {
   user: User["user"];
 }
 
-export interface AuthContextType {
-  user: AuthSession | undefined;
+export interface SessionContextType {
+  user: Session | undefined;
   setAuth: (newToken: string) => Promise<void>;
   clearAuth: () => void;
 }
