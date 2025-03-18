@@ -8,7 +8,7 @@ import { SessionContext } from "./SessionContext";
 import type { SessionContextType, Session } from "types";
 
 /**
- * Custom context provider for authentication that exports functions for setting and clearing authentication
+ * Custom context provider for user session
  */
 export function SessionContextProvider({
   children,
