@@ -10,7 +10,7 @@ on:
 
 jobs:
   eslint:
-    name: Run ESLint
+    name: Build Project
     runs-on: ubuntu-latest
 
     steps:
@@ -26,5 +26,5 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run ESLint
+      - name: Run Build
         run: npm run build
