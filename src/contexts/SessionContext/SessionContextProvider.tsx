@@ -1,4 +1,4 @@
-import { useCallback, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 
 import { getCurrentUserPermissions } from "api";
 import { loadAuth, removeAuth, saveAuth } from "utils";
