@@ -55,8 +55,11 @@ export default tseslint.config(
             references: ["tsconfig.app.json", "tsconfig.node.json"],
           },
           alias: {
+            api: ["./src/api"],
             assets: ["./src/assets"],
             components: ["./src/components"],
+            constant: ["./src/constants"],
+            contexts: ["./src/contexts"],
             hooks: ["./src/hooks"],
             pages: ["./src/pages"],
             styles: ["./src/styles"],
@@ -64,8 +67,11 @@ export default tseslint.config(
             types: ["./src/types"],
 
             // import files inside the folders
+            "api/*": ["./src/api/*"],
             "assets/*": ["./src/assets/*"],
             "components/*": ["./src/components/*"],
+            "constant/*": ["./src/constants/*"],
+            "contexts/*": ["./src/contexts/*"],
             "hooks/*": ["./src/hooks/*"],
             "pages/*": ["./src/pages/*"],
             "styles/*": ["./src/styles/*"],
@@ -100,11 +106,13 @@ export default tseslint.config(
           "newlines-between": "always",
           pathGroups: [
             {
-              pattern: "{assets,components,hooks,pages,types,utils,src}/**",
+              pattern:
+                "{api,assets,components,constant,contexts,hooks,pages,utils,src}/**",
               group: "internal",
             },
             {
-              pattern: "{assets,components,hooks,pages,types,utils,src}",
+              pattern:
+                "{api,assets,components,constant,contexts,hooks,pages,utils,src}",
               group: "internal",
               position: "before",
             },
