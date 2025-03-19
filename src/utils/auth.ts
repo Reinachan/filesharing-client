@@ -4,12 +4,12 @@ import type { Session } from "types";
 export const saveAuth = (user: Session) => {
   if (!user.token) return;
 
-  localStorage.setItem("auth", JSON.stringify(user));
+  localStorage.setItem("session", JSON.stringify(user));
 };
 
 /** removes user session from localstorage */
 export const removeAuth = () => {
-  localStorage.removeItem("auth");
+  localStorage.removeItem("session");
 };
 
 /**
@@ -17,6 +17,6 @@ export const removeAuth = () => {
  * @returns {Session} user session
  */
 export const loadAuth = () => {
-  const storage = localStorage.getItem("auth");
+  const storage = localStorage.getItem("session");
   if (storage) return JSON.parse(storage) as Session;
 };
