@@ -27,8 +27,11 @@
     "paths": {
         // import index exported members
         // should be at top for highest priority
+        "api": ["./src/api"],
         "assets": ["./src/assets"],
         "components": ["./src/components"],
+        "constant": ["./src/constants"],
+        "contexts": ["./src/contexts"],
         "hooks": ["./src/hooks"],
         "pages": ["./src/pages"],
         "styles": ["./src/styles"],
@@ -36,8 +39,11 @@
         "types": ["./src/types"],
 
         // import files inside the folders
+        "api/*": ["./src/api/*"],
         "assets/*": ["./src/assets/*"],
         "components/*": ["./src/components/*"],
+        "constant/*": ["./src/constants/*"],
+        "contexts/*": ["./src/contexts/*"],
         "hooks/*": ["./src/hooks/*"],
         "pages/*": ["./src/pages/*"],
         "styles/*": ["./src/styles/*"],

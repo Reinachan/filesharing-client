@@ -1,5 +1,7 @@
 import { Route, Routes } from "react-router";
 
+import { SignIn } from "pages";
+
 import App from "./App";
 
 export function Router() {
@@ -11,6 +13,7 @@ export function Router() {
       <Route path="files" />
       <Route path="users" />
       <Route path="profile" />
+      <Route path="signin" element={<SignIn />} />
     </Routes>
   );
 }

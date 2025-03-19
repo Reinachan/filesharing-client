@@ -2,6 +2,8 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router";
 
+import { SessionContextProvider } from "contexts";
+
 import { Router } from "./Router";
 
 import "styles/index.css";
@@ -10,7 +12,9 @@ import "styles/index.css";
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <BrowserRouter>
-      <Router />
+      <SessionContextProvider>
+        <Router />
+      </SessionContextProvider>
     </BrowserRouter>
   </StrictMode>
 );

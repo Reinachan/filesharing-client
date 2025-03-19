@@ -1,10 +1,16 @@
 @import url("./theme.css");
 
+:root {
+  color-scheme: light dark;
+}
+
 body {
   all: unset;
 
   min-block-size: 100vh;
   margin: 0;
+
+  color: var(--main-text-clr);
 
   background-color: var(--page-bkg);
 
