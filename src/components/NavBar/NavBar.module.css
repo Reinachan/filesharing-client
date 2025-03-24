@@ -1,0 +1,28 @@
+.NavBar {
+  & a {
+    font-family: var(--navbar-font-family);
+    font-size: var(--navbar-font-size);
+    font-weight: var(--navbar-font-weight);
+    color: var(--navbar-text-clr);
+    text-decoration: none;
+  }
+
+  & > ul {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 1em;
+
+    place-content: stretch start;
+    align-items: start;
+
+    inline-size: fit-content;
+    block-size: fit-content;
+    padding-block: 0.8em;
+    padding-inline: 1.5em;
+
+    list-style-type: none;
+
+    background: var(--navbar-bkg);
+    border-radius: 2em;
+  }
+}
