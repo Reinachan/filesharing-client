@@ -5,6 +5,23 @@
     font-weight: var(--navbar-font-weight);
     color: var(--navbar-text-clr);
     text-decoration: none;
+
+    &:global(.active) {
+      font-weight: var(--navbar-active-font-weight);
+    }
+
+    &:focus-visible {
+      border-radius: 0.5em;
+      outline-offset: 0.5em;
+
+      &:not(:global(.active)) {
+        text-decoration: underline;
+      }
+    }
+
+    &:hover:not(:global(.active)) {
+      text-decoration: underline;
+    }
   }
 
   & > ul {
