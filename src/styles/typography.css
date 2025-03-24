@@ -1,0 +1,6 @@
+:root {
+  /* NavBar */
+  --navbar-font-family: inherit;
+  --navbar-font-size: 1.125rem;
+  --navbar-font-weight: 400;
+}
