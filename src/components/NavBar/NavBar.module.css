@@ -1,4 +1,8 @@
 .NavBar {
+  display: flex;
+
+  max-inline-size: 100%;
+
   & a {
     font-family: var(--navbar-font-family);
     font-size: var(--navbar-font-size);
@@ -41,5 +45,10 @@
 
     background: var(--navbar-bkg);
     border-radius: 2em;
+
+    @media (width < 680px) {
+      max-inline-size: 100%;
+      overflow: scroll;
+    }
   }
 }
