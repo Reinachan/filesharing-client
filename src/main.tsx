@@ -15,7 +15,9 @@ createRoot(document.getElementById("root")!).render(
     <BrowserRouter>
       <SessionContextProvider>
         <Header />
-        <Router />
+        <main id="main">
+          <Router />
+        </main>
       </SessionContextProvider>
     </BrowserRouter>
   </StrictMode>

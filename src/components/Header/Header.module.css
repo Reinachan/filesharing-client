@@ -16,7 +16,29 @@
     margin: 0.5rem;
   }
 
-  & img {
-    block-size: 2.5rem;
+  & > div {
+    display: flex;
+    flex-flow: row;
+    column-gap: 20px;
+
+    align-items: center;
+
+    @media (width < 680px) {
+      flex-flow: column-reverse;
+    }
+
+    & > a {
+      inset-inline-start: 0;
+
+      transform: translateY(-500rem);
+
+      &:focus {
+        transform: translateY(0);
+      }
+    }
+
+    & > img {
+      block-size: 2.5rem;
+    }
   }
 }
