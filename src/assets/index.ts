@@ -1,1 +1,1 @@
-export { default as logo } from "./fileshare_logo.png";
+export { default as logo } from "./fileshare_logo.svg";
