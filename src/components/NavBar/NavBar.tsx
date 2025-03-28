@@ -13,14 +13,14 @@ export default function NavBar() {
       <ul>
         <li>
           <NavLink to="/download" end>
-            Download
+            <span>Download</span>
           </NavLink>
         </li>
 
         {user?.user.permissions.upload_files && (
           <li>
             <NavLink to="/upload" end>
-              Upload
+              <span>Upload</span>
             </NavLink>
           </li>
         )}
@@ -28,7 +28,7 @@ export default function NavBar() {
         {user?.user.permissions.list_files && (
           <li>
             <NavLink to="/files" end>
-              Files
+              <span>Files</span>
             </NavLink>
           </li>
         )}
@@ -36,7 +36,7 @@ export default function NavBar() {
         {user?.user.permissions.manage_users && (
           <li>
             <NavLink to="/users" end>
-              Users
+              <span>Users</span>
             </NavLink>
           </li>
         )}
@@ -44,11 +44,11 @@ export default function NavBar() {
         <li>
           {user ? (
             <NavLink to="/profile" end>
-              {user.user.username}
+              <span>{user.user.username}</span>
             </NavLink>
           ) : (
             <NavLink to="/signin" end>
-              Sign in
+              <span>Sign in</span>
             </NavLink>
           )}
         </li>

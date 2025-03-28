@@ -3,28 +3,54 @@
 
   max-inline-size: 100%;
 
+  & li {
+    display: flex;
+
+    place-items: center;
+
+    block-size: 3em;
+  }
+
   & a {
+    display: flex;
+
+    place-items: center;
+
+    block-size: 93%;
+
     font-family: var(--navbar-font-family);
     font-size: var(--navbar-font-size);
     font-weight: var(--navbar-font-weight);
     color: var(--navbar-text-clr);
     text-decoration: none;
 
+    border-block-end: 2px solid transparent;
+
     &:global(.active) {
-      font-weight: var(--navbar-active-font-weight);
+      border-block-end: 2px solid white;
     }
 
     &:focus-visible {
-      border-radius: 0.5em;
-      outline-offset: 0.5em;
+      border-block-end: 2px solid var(--link-text-clr);
+      outline: none;
 
       &:not(:global(.active)) {
-        text-decoration: underline;
+        color: var(--link-text-clr);
       }
     }
 
-    &:hover:not(:global(.active)) {
-      text-decoration: underline;
+    /* Errors regardless of its position, this is not more or less specific than the previous selector */
+    /* stylelint-disable-next-line no-descending-specificity */
+    &:hover {
+      border-block-end: 2px solid var(--link-text-clr);
+
+      &:not(:global(.active)) {
+        color: var(--link-text-clr);
+      }
+
+      &:global(.active) {
+        border-block-end: 2px solid white;
+      }
     }
   }
 
@@ -38,7 +64,6 @@
 
     inline-size: fit-content;
     block-size: fit-content;
-    padding-block: 0.8em;
     padding-inline: 1.5em;
 
     list-style-type: none;
@@ -48,7 +73,7 @@
 
     @media (width < 680px) {
       max-inline-size: 100%;
-      overflow: scroll;
+      overflow: auto hidden;
     }
   }
 }
