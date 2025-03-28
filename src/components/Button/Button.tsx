@@ -25,7 +25,7 @@ export default function Button({
   if (kind === "delete")
     return (
       <button type="button" {...args} className={style[kind]}>
-        <Icon icon="rubbish" size={18} />
+        <Icon icon="rubbish" size={11} />
       </button>
     );
 
