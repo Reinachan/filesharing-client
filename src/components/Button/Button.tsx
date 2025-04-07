@@ -10,7 +10,7 @@ interface DeleteButton {
 }
 
 interface RegularButton {
-  kind: "primary" | "secondary";
+  kind?: "primary" | "secondary";
   children: ReactNode;
 }
 
