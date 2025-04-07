@@ -10,3 +10,8 @@ This is supposed to partially replace the basic frontend rendered by the filesha
 - Good accessibility
 - Modern CSS
 - Simple to deploy alongside the server
+
+## Deployment
+
+> [!NOTE]
+> As of right now, we don't have a proper guide on how to deploy this. This setup assumes that you're working on this in development only. We'll improve this section in the future when we've got that sorted out.
