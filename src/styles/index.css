@@ -1,7 +1,10 @@
 @import url("./theme.css");
+@import url("./typography.css");
 
 :root {
   color-scheme: light dark;
+
+  font-family: var(--font-family);
 }
 
 body {

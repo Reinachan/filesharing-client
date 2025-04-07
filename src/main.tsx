@@ -2,6 +2,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router";
 
+import { Header } from "components";
 import { SessionContextProvider } from "contexts";
 
 import { Router } from "./Router";
@@ -11,7 +12,10 @@ createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <BrowserRouter>
       <SessionContextProvider>
-        <Router />
+        <Header />
+        <main id="main">
+          <Router />
+        </main>
       </SessionContextProvider>
     </BrowserRouter>
   </StrictMode>
