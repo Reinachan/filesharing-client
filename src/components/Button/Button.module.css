@@ -1,4 +1,6 @@
-.primary {
+.primary,
+.secondary,
+.delete {
   display: flex;
   flex-flow: row nowrap;
 
@@ -10,9 +12,12 @@
 
   cursor: pointer;
 
-  background-color: var(--button-primary-bkg);
   border: 0;
   border-radius: 0.4em;
+}
+
+.primary {
+  background-color: var(--button-primary-bkg);
 
   &:hover {
     background-color: color-mix(in hsl, var(--button-primary-bkg), black 10%);
@@ -24,20 +29,7 @@
 }
 
 .secondary {
-  display: flex;
-  flex-flow: row nowrap;
-
-  place-content: stretch center;
-  align-items: center;
-
-  padding-block: 0.45em;
-  padding-inline: 1.5em;
-
-  cursor: pointer;
-
   background-color: var(--button-secondary-bkg);
-  border: 0;
-  border-radius: 0.4em;
 
   &:hover {
     background-color: color-mix(in hsl, var(--button-secondary-bkg), black 20%);
@@ -49,20 +41,10 @@
 }
 
 .delete {
-  display: flex;
-  flex-flow: row nowrap;
-
-  place-content: stretch center;
-  align-items: center;
-
   padding-block: 0.4em;
   padding-inline: 0.4em;
 
-  cursor: pointer;
-
   background-color: var(--button-warning-bkg);
-  border: 0;
-  border-radius: 0.4em;
 
   &:hover {
     background-color: color-mix(in hsl, var(--button-warning-bkg), black 10%);
