@@ -2,6 +2,11 @@
 
 The modern client for [Fileshare](https://github.com/Reinachan/filesharing), a filesharing server intended for simple filesharing on the web. Upload a file and get a shareable link that can be used anywhere. The server administrator can create accounts with detailed permissions so that your server doesn't get overloaded by unknown people uploading files to it.
 
+## Current State
+
+> [!WARNING]
+> This project is currently far from ready and is in its current state not a usable alternative to the existing frontend.
+
 ## Goals
 
 This is supposed to partially replace the basic frontend rendered by the filesharing backend. The purpose of the original frontend was to be as simple as possible and working without JS. This new frontend does not intend to be as compatible as possible and instead is allowed to rely on modern browser features that are baseline or that are only progressively enhanced in specific browsers.
