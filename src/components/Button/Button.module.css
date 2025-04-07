@@ -1,0 +1,56 @@
+.primary,
+.secondary,
+.delete {
+  display: flex;
+  flex-flow: row nowrap;
+
+  place-content: stretch center;
+  align-items: center;
+
+  padding-block: 0.45em;
+  padding-inline: 1.5em;
+
+  cursor: pointer;
+
+  border: 0;
+  border-radius: 0.4em;
+}
+
+.primary {
+  background-color: var(--button-primary-bkg);
+
+  &:hover {
+    background-color: color-mix(in hsl, var(--button-primary-bkg), black 10%);
+  }
+
+  &:active {
+    background-color: color-mix(in hsl, var(--button-primary-bkg), black 20%);
+  }
+}
+
+.secondary {
+  background-color: var(--button-secondary-bkg);
+
+  &:hover {
+    background-color: color-mix(in hsl, var(--button-secondary-bkg), black 20%);
+  }
+
+  &:active {
+    background-color: color-mix(in hsl, var(--button-secondary-bkg), black 30%);
+  }
+}
+
+.delete {
+  padding-block: 0.4em;
+  padding-inline: 0.4em;
+
+  background-color: var(--button-warning-bkg);
+
+  &:hover {
+    background-color: color-mix(in hsl, var(--button-warning-bkg), black 10%);
+  }
+
+  &:active {
+    background-color: color-mix(in hsl, var(--button-warning-bkg), black 20%);
+  }
+}
