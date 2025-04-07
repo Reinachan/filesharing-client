@@ -15,6 +15,7 @@
   /* Navbar */
   --navbar-bkg: #333;
   --navbar-text-clr: var(--main-text-clr);
+  --navbar-active-border-bottom-clr: #fff;
 
   /* Input */
   --input-bkg: #202020;
