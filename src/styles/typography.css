@@ -1,0 +1,11 @@
+:root {
+  --font-family:
+    system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, ubuntu,
+    "Helvetica Neue", oxygen, cantarell, sans-serif;
+
+  /* NavBar */
+  --navbar-font-family: inherit;
+  --navbar-font-size: 1.125rem;
+  --navbar-font-weight: 400;
+  --navbar-active-font-weight: bold;
+}

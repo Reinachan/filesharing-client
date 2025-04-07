@@ -1,0 +1,79 @@
+.NavBar {
+  display: flex;
+
+  max-inline-size: 100%;
+
+  & li {
+    display: flex;
+
+    place-items: center;
+
+    block-size: 3em;
+  }
+
+  & a {
+    display: flex;
+
+    place-items: center;
+
+    block-size: 93%;
+
+    font-family: var(--navbar-font-family);
+    font-size: var(--navbar-font-size);
+    font-weight: var(--navbar-font-weight);
+    color: var(--navbar-text-clr);
+    text-decoration: none;
+
+    border-block-end: 2px solid transparent;
+
+    &:global(.active) {
+      border-block-end: 2px solid var(--navbar-active-border-bottom-clr);
+    }
+
+    &:focus-visible {
+      border-block-end: 2px solid var(--link-text-clr);
+      outline: none;
+
+      &:not(:global(.active)) {
+        color: var(--link-text-clr);
+      }
+    }
+
+    /* Errors regardless of its position, this is not more or less specific than the previous selector */
+    /* stylelint-disable-next-line no-descending-specificity */
+    &:hover {
+      border-block-end: 2px solid var(--link-text-clr);
+
+      &:not(:global(.active)) {
+        color: var(--link-text-clr);
+      }
+
+      &:global(.active) {
+        border-block-end: 2px solid var(--navbar-active-border-bottom-clr);
+      }
+    }
+  }
+
+  & > ul {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 1em;
+
+    place-content: stretch start;
+    align-items: start;
+
+    inline-size: fit-content;
+    block-size: fit-content;
+    padding-inline: 1.5em;
+
+    list-style-type: none;
+
+    background: var(--navbar-bkg);
+    border-radius: 2em;
+
+    @media (width < 680px) {
+      max-inline-size: 100%;
+      overflow: auto hidden;
+    }
+  }
+}
