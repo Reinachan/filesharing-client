@@ -32,13 +32,21 @@ export default function Button({
 }: ButtonProps) {
   if (kind === "delete")
     return (
-      <button type="button" {...args} className={style[kind]}>
+      <button
+        type="button"
+        {...args}
+        className={[style[kind], args.className].join(" ")}
+      >
         <Icon icon="rubbish" size={11} />
       </button>
     );
 
   return (
-    <button type="button" {...args} className={style[kind]}>
+    <button
+      type="button"
+      {...args}
+      className={[style[kind], args.className].join(" ")}
+    >
       {children}
     </button>
   );
