@@ -1,6 +1,6 @@
 # Fileshare Client
 
-The modern client for [Fileshare](https://github.com/Reinachan/filesharing).
+The modern client for [Fileshare](https://github.com/Reinachan/filesharing), a filesharing server intended for simple filesharing on the web. Upload a file and get a shareable link that can be used anywhere. The server administrator can create accounts with detailed permissions so that your server doesn't get overloaded by unknown people uploading files to it.
 
 ## Goals
 
