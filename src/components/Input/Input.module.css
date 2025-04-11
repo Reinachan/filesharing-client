@@ -1,0 +1,146 @@
+.input[type="date"] {
+  appearance: none;
+
+  inline-size: 100%;
+  max-inline-size: 21.5em;
+  block-size: 1.8em;
+  padding-block: 0.2em;
+  padding-inline: 0.6em;
+
+  color: var(--input-placeholder-clr);
+
+  background-color: var(--input-bkg);
+  border: 0;
+  border-radius: 0.4em;
+}
+
+.input[type="datetime-local"] {
+  appearance: none;
+
+  inline-size: 100%;
+  max-inline-size: 21.5em;
+  block-size: 1.8em;
+  padding-block: 0.2em;
+  padding-inline: 0.6em;
+
+  color: var(--input-placeholder-clr);
+
+  background-color: var(--input-bkg);
+  border: 0;
+  border-radius: 0.4em;
+}
+
+.input[type="file"] {
+  cursor: pointer;
+
+  &::file-selector-button {
+    inline-size: 100%;
+    max-inline-size: 7.5em;
+    block-size: 2.15em;
+    padding-block: 0.4em;
+    padding-inline: 1.6em;
+
+    background-color: var(--button-secondary-bkg);
+    border: 0;
+    border-radius: 0.4em;
+  }
+
+  /* stylelint-disable-next-line csstools/use-nesting */
+  &::file-selector-button:hover {
+    background-color: color-mix(in hsl, var(--button-secondary-bkg), black 20%);
+  }
+
+  &::file-selector-button:active {
+    background-color: color-mix(in hsl, var(--button-secondary-bkg), black 30%);
+  }
+}
+
+.input[type="text"] {
+  inline-size: 100%;
+  max-inline-size: 21.5em;
+  block-size: 1.8em;
+  padding-block: 0.2em;
+  padding-inline: 0.6em;
+
+  color: var(--input-text-clr);
+
+  background-color: var(--input-bkg);
+  border: 0;
+  border-radius: 0.4em;
+
+  &::placeholder {
+    color: var(--input-placeholder-clr);
+  }
+}
+
+.input[type="password"] {
+  inline-size: 21.5em;
+  block-size: 1.8em;
+  padding-block: 0.2em;
+  padding-inline: 0.6em;
+
+  color: var(--input-text-clr);
+
+  background-color: var(--input-bkg);
+  border: 0;
+  border-radius: 0.4em;
+
+  &::placeholder {
+    color: var(--input-placeholder-clr);
+  }
+}
+
+.input[type="checkbox"] {
+  position: relative;
+  justify-self: start;
+
+  display: flex;
+  flex-flow: row nowrap;
+  grid-row: 1;
+  grid-column: 1;
+
+  place-content: stretch center;
+  align-items: center;
+
+  inline-size: 100%;
+  max-inline-size: 1.8em;
+  block-size: 1.8em;
+  padding-block: 0.3em;
+  padding-inline: 0;
+
+  cursor: pointer;
+
+  background-color: var(--button-secondary-bkg);
+  border-radius: 0.4em;
+  appearance: none;
+
+  &:hover {
+    background-color: color-mix(in hsl, var(--button-secondary-bkg), white 10%);
+  }
+
+  &:active {
+    background-color: color-mix(in hsl, var(--button-secondary-bkg), white 20%);
+  }
+
+  &:checked {
+    background-color: var(--button-secondary-bkg);
+  }
+
+  &::after {
+    display: none;
+
+    content: "";
+  }
+
+  &:checked::after {
+    display: block;
+
+    inline-size: 0.45em;
+    block-size: 0.9em;
+
+    border: solid white;
+    border-width: 0 0.15em 0.15em 0;
+
+    transform: rotate(45deg) translateY(-0.05em) translateX(-0.05em);
+  }
+}
